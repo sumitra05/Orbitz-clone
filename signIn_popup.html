@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"/>
+		    <title>popup</title>
+		<style>
+            body{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .popup{
+            font-weight: 700;
+
+          }
+
+        #sign:hover{
+           color: rgb(39, 129, 129);
+           cursor: pointer;
+        }
+         #hoverPop {
+				display: none;
+				position: absolute;
+				top: 65px;
+				width: fit-content;
+				padding: 30px;
+				background-color: white;
+                height: 250px;
+                width: auto;
+                border-radius: 2px;
+                box-shadow: 1px 1px 1px 1px rgb(219, 211, 211);
+		   }
+           #btn{
+               padding: 8px;
+               width: 100%;
+               background-color: rgb(167, 20, 45);
+               border: transparent;
+               color: white;
+               font-size: 15px;
+               cursor: pointer;
+               
+           }
+
+	         #hoverPop > h5 {
+                 color: rgb(20, 77, 77);
+                 margin-left: 100px;
+                 cursor: pointer;
+                 
+             }
+
+			/* .popup:hover .hoverPop {
+				display: block;
+                
+			} */
+            #hoverPop > h3{
+              margin-top: -10px;
+            }
+
+            #hoverPop >p{
+              font-weight: 400;
+              cursor: pointer;
+           }
+
+            #hoverPop:hover > p{
+              color: rgb(24, 85, 85);
+              
+            }
+
+
+		</style>
+		
+	</head>
+	<body>
+		<nav>
+			<div class="popup">
+				<botton id="sign" onclick="openPopup()" style="padding: 30px">Sign in</botton>
+				<div id="hoverPop">
+					<h3>Members can access discounts, points and <br> special features</h3>
+
+                    <div>
+                        <a href="https://www.orbitz.com/login?pwaAuth=1&ckoflag=0&uurl=e3id%3Dredr%26rurl%3D%2F">
+                            <button id="btn">Sign in</button>
+                        </a>
+                        
+                    </div>
+                    <h5>Create a free account</h5>
+                    <p>List of favorites</p>
+                    <p>Loyalty program</p>
+                    <hr>
+                    <p>Feedback</p>
+                    
+				</div>
+               
+                
+			</div>
+			
+		</nav>
+		
+	</body>
+	<script>
+        function openPopup() {
+            document.getElementById("hoverPop").style.display = "block";
+            
+        }
+        
+
+        function closePopup() {
+            document.getElementById("hoverPop").style.display = "none";
+        }
+        
+        window.onclick = function (event) {
+            var modal = document.getElementById('HoverPop');
+            if (event.target == modal) {
+                closePopup();
+            }
+        }
+
+    </script>
+</html>
